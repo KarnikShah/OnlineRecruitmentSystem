@@ -1,0 +1,668 @@
+111111111111
+
+Minimum Gifts
+Problem Description
+A Company has decided to give some gifts to all of its employees. For that, company has given some rank to each employee. Based on that rank, company has made certain rules to distribute the gifts.
+
+The rules for distributing the gifts are:
+
+Each employee must receive at least one gift.
+
+Employees having higher ranking get a greater number of gifts than their neighbours.
+
+What is the minimum number of gifts required by company?
+
+Constraints
+1 < T < 10
+
+1 < N < 100000
+
+1 < Rank < 10^9
+
+Input
+First line contains integer T, denoting the number of testcases.
+
+For each testcases:
+
+First line contains integer N, denoting number of employees.
+
+Second line contains N space separated integers, denoting the rank of each employee.
+
+Output
+For each testcase print the number of minimum gifts required on new line.
+
+Time Limit
+1
+
+Examples
+Example 1
+
+Input
+
+2
+
+5
+
+1 2 1 5 2
+
+2
+
+1 2
+
+Output
+
+7
+
+3
+
+Explanation
+
+For testcase 1, adhering to rules mentioned above,
+
+Employee # 1 whose rank is 1 gets one gift
+
+Employee # 2 whose rank is 2 gets two gifts
+
+Employee # 3 whose rank is 1 gets one gift
+
+Employee # 4 whose rank is 5 gets two gifts
+
+Employee # 5 whose rank is 2 gets one gift
+
+Therefore, total gifts required is 1 + 2 + 1 + 2 + 1 = 7
+
+Similarly, for testcase 2, adhering to rules mentioned above,
+
+Employee # 1 whose rank is 1 gets one gift
+
+Employee # 2 whose rank is 2 gets two gifts
+
+Therefore, total gifts required is 1 + 2 = 3
+
+
+
+222222222222
+
+Codekart
+Problem Description
+Codu wants to create a shopping application. The application would sell only SHIRT and SHOE and have a cost that can be modified based on market needs. This application should allow users in two roles, viz. store manager(SM) and shopper(S).
+
+Codu wants to test the app. He wants the application to execute a few commands and print the output.
+
+Following is the list of allowed commands:
+
+CMD SM ADD [ITEM NAME] [ITEM QTY] - adds the given quantity of the item to the inventory and prints(returns) the quantity added, otherwise prints -1 when there is any error or invalid input. Item qty can only be whole numbers > 0.
+
+CMD SM REMOVE [ITEM NAME] - removes the item from the inventory, returns and prints -1 when there is an error, otherwise prints(returns) 1.
+
+CMD SM GET_QTY [ITEM NAME] - returns and prints the currently available quantity for the item in the inventory, otherwise prints(returns) 0 in case the item is not found.
+
+CMD SM INCR [ITEM NAME] [ITEM QTY] - adds the given quantity of the item to the inventory and prints(returns) the quantity added, otherwise prints(returns) -1 when there is any error or invalid input. item qty can only be whole numbers > 0.
+
+CMD SM DCR [ITEM NAME] [ITEM QTY] - removes the given quantity of the item from the inventory and prints(returns) the quantity added, otherwise prints(returns) -1 when there is any error or invalid input. item qty can only be whole numbers > 0.
+
+CMD SM SET_COST [ITEM NAME] [COST] - sets the cost of the item, returns the value, otherwise prints -1 in case of any errors or invalid input. Cost must be decimal.
+
+
+CMD S ADD [ITEM NAME] [ITEM QTY] - adds the given quantity of the item to the shopping cart and prints(returns) the quantity added, otherwise prints -1 when there is any error or invalid input. Item qty can only be whole numbers > 0.
+
+CMD S REMOVE [ITEM NAME] - removes the item from the shopping cart, returns and prints -1 when there is an error, otherwise prints(returns) 1.
+
+CMD S INCR [ITEM NAME] [ITEM QTY]   - adds the given quantity of the item to the shopping cart and prints(returns) the quantity added, otherwise prints(returns) -1 when there is any error or invalid input. item qty can only be whole numbers > 0.
+
+CMD S DCR [ITEM NAME] [ITEM QTY] - removes the given quantity of the item from the shopping cart and prints(returns) the quantity added, otherwise prints(returns) -1 when there is any error or invalid input. item qty can only be whole numbers > 0.
+
+CMD S GET_ORDER_AMOUNT - gets the total price of the items in the cart, returns the value, otherwise prints -1 in case of any error or invalid input. The total amount should be rounded and printed up to two decimal places.
+
+NOTE- Increment and Decrement operations are only possible when the item is already in the inventory or cart. If increment or decrement is attempted on items that do not exist in the cart, then the command should return and print -1.
+
+If an attempt is made to add an item that is already in the inventory or cart, such operations should result in an error and must return and print -1.
+
+If an item which is present in the cart or inventory is removed using remove command and an increment or decrement operation is performed on it, such operations should result in an error and must return and print -1.
+
+If any item quantity after decrement becomes zero, the same is removed from the corresponding inventory or cart. Performing increment or decrement operation after such a previous decrement operation, should result in an error and return -1.
+
+You need to think of other similar error conditions while implementing the solution.
+
+Please note at the beginning of a test case or command set, both the inventory as well as the cart is empty.
+
+Here,
+
+SM= STORE MANAGER
+
+S= SHOPPER
+
+You are required to create the application for Codu to manage the shopping kiosk.
+
+The first line of input T,  gives the number of test cases.
+
+Each test set is a set of commands, which ends with "END" string.
+
+Each command in a test case is on a new line
+
+Constraints
+1<=T<=10
+
+Input
+First line contains an integer T, which denotes the number of test cases
+
+Second line onwards, there will be commands until we receive END command. Any command after the END command belongs to next test case.
+
+For command format refer to Example section.
+
+Output
+Print output of every command. (Print double value for command SET_COST(rounding to one decimal places) and GET_ORDER_AMOUNT(rounding to two decimal places) )
+
+Time Limit
+1
+
+Examples
+Example 1
+
+Input
+
+1
+
+CMD SM SET_COST SHOE 5
+
+CMD SM SET_COST SHIRT 10
+
+CMD SM ADD SHOE 5
+
+CMD SM ADD SHIRT 10
+
+CMD SM DCR SHIRT 5
+
+CMD SM INCR SHOE 5
+
+CMD SM GET_QTY SHIRT
+
+CMD SM GET_QTY SHOE
+
+CMD SM REMOVE SHIRT
+
+CMD SM GET_QTY SHIRT
+
+CMD S ADD SHOE 2
+
+CMD S INCR SHOE 2
+
+CMD S DCR SHOE 1
+
+CMD S GET_ORDER_AMOUNT
+
+END
+
+Output
+
+5.0
+
+10.0
+
+5
+
+10
+
+5
+
+5
+
+5
+
+10
+
+1
+
+0
+
+2
+
+2
+
+1
+
+15.00
+
+Explanation :
+
+From commands "CMD SM SET_COST SHOE 5" and "CMD SM SET_COST SHIRT 10"
+
+We are successfully setting the cost as 5.0 and 10.0 respectively.
+
+From next commands "CMD SM ADD SHOE 5" and "CMD SM ADD SHIRT 10"
+
+Quantity of 5 shoes and 10 shirts has been successfully added to the inventory.
+
+From next commands "CMD SM DCR SHIRT 5"" and "CMD SM INCR SHOE 5"
+
+Shirt quantity is decremented by 5 and shoe quantity is incremented by 5. This leaves us with 5 shirts and 10 shoes in the inventory.
+
+From next commands "CMD SM GET_QTY SHIRT" and "CMD SM GET_QTY SHOE"
+
+We are getting the quantity of shirt and shoe, which is 5 and 10 respectively.
+
+From next command "CMD SM REMOVE SHIRT"
+
+Shirt is removed from the inventory and hence 1 is printed.
+
+From next command "CMD SM GET_QTY SHIRT"
+
+We are querying the quantity of shirt, which is 0 as it was removed in the previous command.
+
+From next command "CMD S ADD SHOE 2"
+
+Shopper adds two shoes to the cart hence 2 is printed.
+
+From next commands "CMD S INCR SHOE 2" and "CMD S DCR SHOE 1"
+
+The user increments these shoes by 2 and then decrements by 1 hence 2 and 1 are printed. SO current shoes in cart= 2+2-1=3
+
+From next commands "CMD S GET_ORDER_AMOUNT"
+
+The next command asks to print order amount or cart value, which is the cost of shoes * the number of shoes=5*3=15 hence 15.00 is printed by rounding to two decimal places.
+
+
+
+
+3333333333333
+
+Railway Station
+Problem Description
+Given schedule of trains and their stoppage time at a Railway Station, find minimum number of platforms needed.
+
+Note -
+
+If Train A's departure time is x and Train B's arrival time is x, then we can't accommodate Train B on the same platform as Train A.
+
+Constraints
+1 <= N <= 10^5
+
+0 <= a <= 86400
+
+0 < b <= 86400
+
+Number of platforms > 0
+
+Input
+First line contains N denoting number of trains.
+
+Next N line contain 2 integers, a and b, denoting the arrival time and stoppage time of train.
+
+Output
+Single integer denoting the minimum numbers of platforms needed to accommodate every train.
+
+Time Limit
+1
+
+Examples
+Example 1
+
+Input
+
+3
+
+10 2
+
+5 10
+
+13 5
+
+Output
+
+2
+
+Explanation
+
+The earliest arriving train at time t = 5 will arrive at platform# 1. Since it will stay there till t = 15, train arriving at time t = 10 will arrive at platform# 2. Since it will depart at time t = 12, train arriving at time t = 13 will arrive at platform# 2.
+
+Example 2
+
+Input
+
+2
+
+2 4
+
+6 2
+
+Output
+
+2
+
+Explanation
+
+Platform #1 can accommodate train 1.
+
+Platform #2 can accommodate train 2.
+
+Note that the departure of train 1 is same as arrival of train 2, i.e. 6, and thus we need a separate platform to accommodate train 2.
+
+
+
+44444444444444
+
+Lego Tower
+Problem Description
+Rahul and his friends are making LEGO towers out of their LEGO bricks. His friends arrive at different times and join the existing group in LEGO tower building activity. The rules that Rahul and friends are following are as follows:
+
+To maintain the balance of the tower, they decide to impose a maximum limit on the height of the tower
+Each friend brings whatever number of bricks he has, but less than or equal to the maximum height allowed for the tower
+In order to differentiate between bricks belonging to different friend, they decide to insert a plate between bricks brought by two friends
+Height of each brick as well as height of each plate is 1 unit
+Actual height of the constructed tower is total number of (bricks + plates) in that tower
+Plate can only be added if bricks above belong to a different friend
+In order to avoid losing bricks, they also agree that all the bricks belonging to one friend will be used only in construction of one tower
+Once the construction of a new tower has begun, no brick/plate can be added to the previous tower
+Help Rahul and friends such that they are of maximum height and minimum number of towers possible
+You also have to minimize height factor while maintaining minimum number of towers.
+
+Height factor = ∑ ((Maximum height allowed - height of tower)2)
+
+Example:
+
+Maximum height allowed: 10
+
+Bricks contributed by friends: 6 3 5 2 4
+
+Here we can make 3 towers such that
+
+· 1st tower has 6 + 1 + 3 bricks, total of 10 (1 is for the height of LEGO plate)
+
+· 2nd tower has 5 + 1 + 2 bricks, total of 8 (1 is for the height of LEGO plate)
+
+· 3rd tower has 4 bricks
+
+In this case height factor is: (10 - 10)2 + (10 - 8)2 + (10 - 4)2 = 40
+
+Another way is
+
+· 1st tower has 6 bricks
+
+· 2nd tower has 3 + 1 + 5 bricks, total of 09 (1 is for the height of LEGO plate)
+
+· 3rd tower has 2 + 1 + 4 bricks, total of 07 (1 is for the height of LEGO plate)
+
+In this case, height factor is: (10 - 6)2 + (10 - 9)2 + (10 - 7)2 = 26
+
+It is clear that height factor is minimum in the second case, so the output will be: (6) (3-5) (2-4)
+
+Note: There are no test cases with more than one occurrence of minimum height factor.
+
+Constraints
+10 <= H <= 100
+
+1 <= bricks brought by friends <= H
+
+1 <= number of friends <= 10000
+
+Input
+First line contains an integer H, which denotes maximum height of the tower allowed
+
+Second line contains arbitrary number of space separated integers which corresponds to the number of bricks brought by the respective friend
+
+Output
+The number of bricks and plates in every tower, in the order that they are assembled in, enclosed in parenthesis. Repeat this for all constructed towers. A plate will be represented by "-".
+
+Refer example section for better understanding.
+
+Time Limit
+1
+
+
+Examples
+Example 1
+
+Input
+
+10
+
+6 3 5 2 4
+
+Output
+
+(6) (3-5) (2-4)
+
+Explanation:
+
+
+Example 2
+
+Input
+
+13
+
+2 2 8 9 1 3 1 1 10 8
+
+Output
+
+(2-2) (8) (9) (1-3-1-1) (10) (8)
+
+Explanation:
+
+There can be many possibilities of constructing towers. But with minimum height factor, the correct solution is: (2-2) (8) (9) (1-3-1-1) (10) (8)
+
+
+
+555555555555
+
+The Angel vs Devil
+Problem Description
+In a board game of dimension(12x12) called Angels vs Devils, various Devils try to kill an Angel whose aim is to get across the board. Each Devil has different powers.
+
+Starting point of the Angel can be on any border but not on the corners of the board. Starting point will be provided as input. Angel will walk in a straight line across the board. Starting points of all three types of devils will be provided as input. Their powers are as follows.
+
+LUCIQUARE (L): His starting point can be on any of the four borders of the board. He leaves a poison trail and moves in 'L' shape such that it is possible to create the biggest square along with the borders of the board. Square may or may not be formed in 12 seconds within which the angel crosses from one end of the board to other.
+
+THREE LEGGED EEK (E): She is a large three legged devil. She crushes the angel if he comes into any of those 3 boxes where her legs are placed. She can only walk diagonally and starts moving towards the cell A1. If she reaches the border she returns on the same path and keeps moving to and fro like this.
+
+For example the image below she is where its mentioned E1 in the 1st second, she is at E2 in the 2nd second, E3 in the 3rd second, in the 4th second she is again in the squares where E2 is mentioned, in the 5th second she is again in the squares where E1 is mentioned, in the 6th second she is in the squares where E6 is mentioned, in the 7th second she is in the squares where E7 is mentioned since she has reached border of the board she will move back again in the same path.
+
+MUTO (M): He can be move to other cells without the need to traverse the path. He can be present at vertically, diagonally, horizontally opposite cells at subsequent seconds. He makes these moves in clockwise manner. If angel comes on the same cell as him, he will convert the Angel into a Muto.
+
+Note:- All four entities move at the speed of 1 cell per second.
+
+
+Constraints
+Angel starts from any of the four borders but not from the corners.
+
+Starting points of angel and all the devils will be different.
+
+In case angel moves to a cell where he meets more than one devil, the angel dies.
+
+It is possible that two or more devils are present in the same cell in the same second
+
+Input
+First Line provides the cell(row, col) which is the starting point of Angel
+
+Second Line contains types of devils in order denoted by { L, E, M } separated by '|'
+
+Third Line contains starting points of devils in order mentioned in the 2nd line of input separated by '|'
+
+Output
+Output depends on events that occur in 12 second window.
+
+· If Angel successfully crosses the board print 'WON'
+
+· If Angel gets converted into muto print 'MUTO'
+
+· If Angel dies then print the cell number in which the Angel died
+
+Time Limit
+1
+
+
+Examples
+Example 1
+
+Input
+
+I12
+
+E|M|L
+
+D9|C2|F1
+
+Output
+
+WON
+
+Explanation
+
+Initial Board Position is displayed in the image by Bold Initials (A1, E1, M1, L1) on the board. Their positions in subsequent seconds is displayed by A2,A3, and E2,E3 and so on. At 2nd Second of the game, Angel will be at I11, EEK will be at B9,C8, and D7. Muto will be at J2 and Luciquare will move to F2 leaving the trail behind.
+
+As shown in the image, EEK will be moving to and fro and will not come in the path of the Angel. Muto can only be at points C2,J2,J11, and C11 at any point in the game. These points also don't come in path of the Angel.
+
+Angel will come at box I7 in the 6th second, Luciquare will take 10 seconds to reach there. Hence Angel will not be in the path of any of the devils. So the outcome will be that the angel will cross the board. Hence, the output will be 'WON'.
+
+Example 2
+
+Input
+
+L3
+
+M|L|E
+
+C10|F12|G3
+
+Output
+
+MUTO
+
+Explanation
+
+MUTO and Angel will be in the same box in the third second and Muto will convert the Angel into a Muto. So the output will be 'MUTO'.
+
+Example 3
+
+Input
+
+A5
+
+E|L|M
+
+H4|J1|K3
+
+Output
+
+J5
+
+Explanation
+
+Angel will be killed at position J5 because of Luciquares's poisonous trail.
+
+
+
+6666666666666
+
+Maximum Prize
+Problem Description
+Imagine you are a martial arts fighter fighting with fellow martial artists to win prize money. However unlike traditional competitions, here you have the opportunity to pick and choose your opponent to maximize your prize kitty. The rules of maximization of prize kitty are as follows
+
+► You have a superpower bestowed upon you, that you will win against anyone you challenge
+
+► You have to choose the right order because unfortunately the superpower does not ensure that your prize money is always the highest
+
+► Every victory against an opponent that you challenge and win against, will translate into a certain winning sum
+
+► Here begins the technical part that you need to know in order to maximize your winning prize money
+
+All your opponents are standing in one line next to each other i.e. the order of opponents is fixed
+Your first task is to choose a suitable opponent from this line
+When you choose one opponent from that line, he steps out of the line and fights you.
+After you beat him, you get to decide how your prize money for winning against him will be calculated
+Essentially, if the opponent you have beaten has two neighbours, then you have the option to multiply the opponent number with any one of the two neighbours and add the other opponent number. That value becomes your prize money for that match
+If your opponent has only one neighbor then your prize money for that match is product of current opponent number with neighbours' opponent number
+When dealing with last opponent in the tournament, your prize money is equal to the value of the last opponent number
+As the tournament proceeds, the opponent that you have beaten has to leave the tournament
+Example: 2 5 6 7
+
+This depicts that you have four opponents with numbers 2 5 6 and 7 respectively
+
+    1. Suppose you choose to fight opponent number 5, then after winning, the max prize kitty you can win for that match is = 5*6+2 = 32
+
+        Now opponent number 5 is out of the game. So opponent number 2 6 7 remain
+
+    2. Suppose you now choose to fight opponent number 2, then after winning, the max prize kitty you can win for that match is = 2*6+0 = 12. Your overall prize kitty is now 32 + 12 = 44
+
+        Now opponent number 2 is out of the game. So opponent number 6 7 remain
+
+    3. Suppose you now choose to fight opponent number 6, then after winning, the max prize kitty you can win for that match is = 7*6+0 = 42. Your overall prize kitty is now 44 + 42 = 86
+
+        Now opponent number 6 is out of the game. So opponent number 7 remains
+
+    4. After beating opponent number 7, the max prize kitty you can win for that match is 7
+
+        So overall prize kitty in this case is 93.
+
+Other orders of choosing opponents will yield the following overall prize kitty
+
+Order 7->2->6->5 will yield overall prize kitty as 87
+
+Order 2->5->6->7 will yield overall prize kitty as 88
+
+Order 5->6->2->7 will yield overall prize kitty as 95
+
+Order 6- >7->2->5 will yield overall prize kitty as 97
+
+But by following the order 6->5->2->7 will yield overall prize kitty as 105, which is maximum.
+
+Your task is to maximize your prize kitty by taking the right decisions
+
+Input
+First line contains an integer N which denotes the number of opponents in the tournament
+
+Second line contains N space separated integers, which are the opponent numbers of other opponents
+
+Output
+Print the maximum number of coins you can win
+
+Constraints
+1 <= N <= 500
+
+0 <= individual coin count < 100
+
+Time Limit
+1
+
+Examples
+Example 1
+
+Input
+
+4
+
+2 5 6 7
+
+Output
+
+105
+
+Explanation:
+
+Refer the explanation in problem description.
+
+Example 2
+
+Input
+
+3
+
+7 8 9
+
+Output
+
+151
+
+Explanation:
+
+    1. You choose to fight opponent number 8, then after winning, the max prize kitty you can win for that match is = 8*9+7 = 79
+
+    Now opponent number 8 is out of the game. So opponent number 7 9 remain
+
+    2. Suppose you now choose to fight opponent number 7, then after winning, the max prize kitty you can win for that match is = 7*9+0 = 63. Your overall prize kitty is now 79 + 63 = 142
+
+    Now opponent number 7 is out of the game. So opponent number 9 remains
+
+    3. After beating opponent number 9, the max prize kitty you can win for that match is 9
+
+    So overall prize kitty in this case is 142 + 9 = 151.

@@ -1,0 +1,1161 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #eeeeee;
+}
+
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+p {
+	color: white;
+	font-size: 1.2rem;
+	margin-top: 5px;
+	line-height: 2rem;
+	font-weight: 400;
+	letter-spacing: .05rem;
+}
+ 
+  h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+/* .container {
+    width: 100%;
+    min-height: 90vh;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+} */
+
+.navbar .container{
+    min-height: auto;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+
+.navbar li{
+    list-style: none;
+    padding: 10px 10px;
+}
+
+.navbar ul li:hover a {
+    border-bottom: 1px solid rgb(153, 153, 228);
+}
+
+#hero {
+	background-image: url(../img/hero.png);
+	background-size: cover;
+    position: fixed;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(22, 22, 22);
+	opacity: 0.9;
+	z-index: -1;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* max-width: 50%; */
+    margin: auto;
+    width: 90%;
+    height: 85%;
+    flex-direction: row-reverse;
+}
+
+.firstHalf{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 40px;
+}
+
+.firstHalf p{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+.secondHalf{
+    width: 45%;
+}
+
+.secondHalf img{
+  /*  border: 4px solid white; */
+    /* border-radius: 0%; */
+    display: block;
+    margin: auto;
+    padding: auto;
+}
+
+.text-big{
+    font-size: 60px;
+    margin: 20px 20px;
+    color: lightcyan;
+}
+
+.text-small{
+    font-size: 30px;
+    margin: 20px 20px;
+    color: rgb(223, 219, 219);
+}
+
+#hero .btn{
+    padding: 8px 20px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+#hero .btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn-sm{
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.btn-dark{
+    color: white;
+    border: 2px solid grey;
+}
+
+#internships.section,
+#frsher_jobs .section {
+    padding-top: 90px;
+}
+
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.max-width-container {
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section h2 {
+    margin-bottom: 0;
+}
+
+.heading_2, h2 {
+    font-size: 28px;
+    line-height: 1.28571429;
+    font-weight: 600;
+}
+
+#internships .section_description,
+#fresher_jobs .section_description {
+    margin-bottom: 40px;
+}
+
+.section .section_description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #484848;
+}
+
+#internships p,
+#fresher_jobs p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.section .section_description .view_all_cta {
+    display: flex;
+    justify-content: flex-end;
+}
+.view_all_cta {
+    font-family: 'Inter var',sans-serif;
+}
+.view_all_cta {
+    display: flex;
+    justify-content: center;
+    min-width: 328px;
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+}
+
+#internships .categories_container,
+#fresher_jobs .categories_container {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+#internships h4,
+#fresher_jobs h4 {
+    font-size: 18px;
+    line-height: 1.33333333;
+    font-weight: 600;
+}
+
+#internships .categories_container .categories,
+#fresher_jobs .categories_container .categories {
+    margin-top: 24px;
+}
+
+.scrollable_cards:not(#trainings_container) {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.scrollable_cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 2px;
+}
+
+.scrollable_cards .card_item .img {
+    width: 132px;
+}
+
+.scrollable_cards .card_item .img img {
+    width: 100%;
+}
+
+#interships img,
+#fresher_jobs img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.scrollable_cards .card_item .text {
+    font-family: 'Inter var',sans-serif;
+}
+
+.scrollable_cards .card_item .text {
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.38;
+    margin-top: 16px;
+}
+
+.scrollable_cards .card_item:first-of-type {
+    margin-left: 1px;
+}
+.scrollable_cards .card_item {
+    display: flex;
+    padding: 16px 4px 24px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px 7px;
+    width: 140px;
+    height: 156px;
+}
+
+.scrollable_cards .card_item:hover{
+    box-shadow: 5px 5px 5px 5px rgb(228, 226, 226);
+}
+
+#internships a,
+#fresher_jobs a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #008BDC;
+    cursor: pointer;
+    line-height: 1.14285714;
+}
+
+#internships a:hover,
+#fresher_jobs a:hover{
+    font-weight: 600;
+    text-decoration: none;
+    color: #dc0000;
+    cursor: pointer;
+    line-height: 1.14285714;
+}
+
+#fresher_jobs .superscript {
+    background: #FF8C00;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    padding: 4px 16px;
+    margin-left: 4px;
+    position: relative;
+    bottom: 4px;
+}
+
+#fresher_jobs #fresher_jobs_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#fresher_jobs #fresher_jobs_container .fresher_job_perk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 44px 32px;
+}
+
+#fresher_jobs #fresher_jobs_container a{
+    color: black;
+}
+
+#fresher_jobs #fresher_jobs_container .fresher_job_perk:hover {
+    box-shadow: 5px 5px 5px 5px rgb(228, 226, 226);
+}
+
+#fresher_jobs #fresher_jobs_container .fresher_job_perk .img {
+    height: 88px;
+    width: 88px;
+}
+
+#fresher_jobs #fresher_jobs_container .fresher_job_perk .name {
+    font-size: 16px;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 8px;
+}
+
+.site-inner {
+    clear: both;
+    position: relative;
+    z-index: 9;
+    word-wrap: break-word;
+}
+
+.site-inner, .wrap {
+    float: none;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#contact {
+    width: 100%;
+  }
+  
+  .contact-details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-details li {
+    padding-bottom: 10px;
+  }
+  
+  #contact textarea {
+    width: 100%;
+    height: 150px;
+    border: 2px solid #01017f;
+  }
+
+  #contact input{
+    border: 2px solid #01017f;
+    height: 45px;
+  }
+  
+  #contact  #sendmessage {
+    color: #18d26e;
+    border: 1px solid #18d26e;
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px;
+  }
+  
+  #contact  #errormessage {
+    color: red;
+    display: none;
+    border: 1px solid red;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px;
+  }
+   
+  #contact #sendmessage.show, #contact #errormessage.show, #contact .show {
+    display: block;
+  }
+  
+  #contact .validation {
+    color: red;
+    display: none;
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  
+  #contact .button {
+    padding: 10px 30px;
+    border: 2px solid black;
+    font-size: 15px;
+    color: white;
+    border-radius: 30px;
+    background-color:#01017f;
+    font-family: 'Poppins', helvetica;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  #contact .button:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+  }
+
+.author-box:before, .clearfix:before, .entry:before, .entry-content:before, .pagination:before, .site-container:before, .site-footer:before, .site-header:before, .site-inner:before, .widget:before, .wrap:before {
+    content: " ";
+    display: table;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+.entry-header, .entry-footer {
+    text-align: center;
+}
+
+.vc_row[data-vc-full-width] {
+    -webkit-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    overflow: hidden;
+}
+.vc_custom_1588765364510 {
+    background-color: #01017f !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+.vc_row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.vc_row:before {
+    content: " ";
+    display: table;
+}
+
+.vc_col-has-fill>.vc_column-inner, .vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner, .vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner, .vc_row-has-fill>.vc_column_container>.vc_column-inner {
+    padding-top: 35px;
+}
+.vc_column_container>.vc_column-inner {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    
+}
+.pad-tp-0>.vc_column-inner {
+    padding-top: 0!important;
+}
+
+.vc_column-inner::after, .vc_column-inner::before {
+    content: " ";
+    display: table;
+}
+
+.vc_row.vc_row-flex {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.vc_row.vc_row-o-content-middle:not(.vc_row-o-equal-height)>.vc_column_container {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.vc_row.vc_row-flex>.vc_column_container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.vc_row.vc_row-o-content-middle>.vc_column_container>.vc_column-inner {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.vc_row.vc_row-flex>.vc_column_container>.vc_column-inner {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 1;
+}
+.vc_column_container>.vc_column-inner {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.col-white, .col-white a, .col-white p, .sub-title.col-white {
+    color: #fff;
+}
+
+.mrg-out {
+    margin-bottom: 0!important;
+}
+
+.main-head.col-white {
+    color: #fff;
+}
+.main-head {
+    color: #000;
+}
+.col-white, .col-white a, .col-white p, .sub-title.col-white {
+    color: #fff;
+}
+#contact h1 {
+    font-size: 35px;
+}
+#contact h1, h2, h3, h4, h5, h6 {
+    font-family: 'Korb';
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+#contact .contact-us{
+    padding: 30px;
+    box-shadow: 1px 1px 8px #00000038;
+    border-radius: 5px;
+}
+
+.sub-main {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.h2-small {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#content .wpb_alert p:last-child, #content .wpb_text_column :last-child, #content .wpb_text_column p:last-child, .wpb_alert p:last-child, .wpb_text_column :last-child, .wpb_text_column p:last-child {
+    margin-bottom: 0;
+}
+#contact p {
+    font-family: 'Korb';
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.right-side-img img {
+    max-width: 300px;
+    margin: 10em 0 2em 1em;
+    /* margin-right:0; */
+}
+
+#contact a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.ci-bxs>.vc_column-inner>.wpb_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bx-rw-c>.vc_column-inner>.wpb_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 0 1em;
+}
+
+.mrg-bt-1 {
+    margin-bottom: 1em!important;
+}
+
+.ci-ti-icn {
+    width: 48.5%;
+    float: left;
+    padding: 15px 10px;
+}
+.ci-ti-icn {
+    height: 190px;
+    width: 48%;
+    box-shadow: 1px 1px 8px #00000038;
+    border-radius: 5px;
+    padding: 25px 10px;
+    border-bottom: 4px solid black;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-icn {
+    margin-bottom: 10px;
+}
+
+.ci-ti-icn img {
+    max-width: 80px;
+    margin-bottom: 0;
+}
+
+.ci-ti-icn:hover{
+    cursor: pointer;
+    border-bottom: 20px solid black;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+#contact img {
+    height: auto;
+    margin: auto;
+}
+
+.ct-ti {
+    font-size: 14px;
+}
+
+#main .container{
+    min-height: auto;
+    padding: 0px 15px 60px 15px;
+    display: flex;
+}
+
+#main .heading{
+    padding: 50px 15px 10px 15px;
+}
+
+#main .col-md-4{
+    padding: 10px;
+}
+#main .card{
+    margin: 15px;
+    border-radius: 10px;
+    /* border: 1px solid #01017f; */
+    box-shadow: 1px 1px 8px #00000038;
+}
+
+#main .card-body{
+    text-align: right;
+}
+
+#main .card-body h5{
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+#main .card-body img{
+    width: 23%;
+    margin-left: 195px;
+}
+
+#main .card-body span{
+    justify-content: right;
+}
+
+#main hr{
+    border: 1px solid gray;
+}
+
+#main .card-body p{
+    color: black;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 7px;
+}
+
+#main .card-body .above{
+    border: 1px solid #eeeeee;
+}
+
+#main .card-body a{
+    text-decoration: none;
+}
+
+#main .card-body a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+#main .button {
+    margin-top: 20px;
+    padding: 10px 35px;
+    border: 2px solid black;
+    font-size: 17px;
+    color: white;
+    /* border-radius: 10px; */
+    background-color:rgb(33, 34, 34);;
+    font-family: 'Poppins', helvetica;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  #main .button:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+  }
+
+  #content .container-fluid .max-width-container #details_container {
+    max-width: 940px;
+    margin: 48px auto;
+}
+
+#content .container-fluid .max-width-container #details_container .heading_title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.heading_2_4 {
+    font-size: 28px;
+    line-height: 1.28571429;
+    font-weight: 600;
+}
+
+#content .container-fluid .max-width-container #details_container .detail_view {
+    border: 1px solid #EEE;
+    border-radius: 6px;
+    padding: 24px 24px 0;
+}
+
+.detail_view .individual_internship {
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_header {
+    margin-bottom: 24px;
+}
+
+#chat_internship_list_container .individual_internship .internship_meta .individual_internship_header, #internship_list_container .individual_internship .internship_meta .individual_internship_header, #job_preview .individual_internship .internship_meta .individual_internship_header, #marketing_first_container .individual_internship .internship_meta .individual_internship_header, .detail_view .individual_internship .internship_meta .individual_internship_header, .similar_internship_list_container .individual_internship .internship_meta .individual_internship_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_header .profile {
+    font-size: 16px;
+    line-height: 20px;
+}
+.detail_view .individual_internship .internship_meta .individual_internship_header .profile {
+    margin-bottom: 8px;
+}
+.heading_4_5 {
+    font-size: 18px;
+    line-height: 1.33333333;
+    font-weight: 600;
+}
+
+.heading_6, h6 {
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-weight: 600;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_header .company_name a {
+    font-family: 'Inter var',sans-serif;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_header .company_name a {
+    color: #8A8A8A;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    line-height: 1.43;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_header .internship_logo img {
+    max-width: 104px;
+    max-height: 15px;
+    color: transparent;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_details #location_names {
+    line-height: 16px;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_details .internship_other_details_container {
+    display: flex;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_details .internship_other_details_container .other_detail_item_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_details .internship_other_details_container .other_detail_item_row .other_detail_item {
+    margin-right: 80px;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_details .internship_other_details_container .other_detail_item_row .other_detail_item .item_heading {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #8A8A8A;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-weight: 500;
+}
+
+.detail_view .individual_internship .internship_meta .individual_internship_details .internship_other_details_container .other_detail_item_row .other_detail_item .item_body {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#content {
+    color: #333;
+    font-family: Inter,sans-serif;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.57142857;
+    font-weight: 400;
+}
+
+#chat_internship_list_container .individual_internship .button_container .tags_container, #internship_list_container .individual_internship .button_container .tags_container, #job_preview .individual_internship .button_container .tags_container, #marketing_first_container .individual_internship .button_container .tags_container, .detail_view .individual_internship .button_container .tags_container, .similar_internship_list_container .individual_internship .button_container .tags_container {
+    display: flex;
+    margin-top: 16px;
+}
+
+.detail_view .individual_internship .button_container .tags_container .label_container {
+    margin-right: 12px;
+}
+.detail_view .individual_internship .button_container .tags_container .label_container{
+padding: 6px 12px;
+background: #F8F8F8;
+border-radius: 14px;
+font-size: 14px;
+color: #666;
+line-height: 16px;
+margin-right: 8px;
+}
+
+.applications_message_container {
+    font-family: 'Inter var',sans-serif;
+}
+.applications_message_container {
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #484848;
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dropdown-menu-container {
+    margin-top: 16px;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.dropdown-menu-container .btn-group .btn {
+    min-width: auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%!important;
+    color: #008BDC;
+    padding: 0;
+}
+
+.button_container, .similar_internship_list_container .individual_internship .button_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#content .container-fluid .max-width-container #details_container .detail_view .internship_details {
+    border-top: 1px solid #EEE;
+}
+
+.internship_details .section_heading {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.heading_5_5 {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.internship_details .text-container {
+    word-break: break-word;
+    font-family: Inter,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 8px;
+    color: #484848;
+}
+
+.internship_details .text-container.website_link a {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.internship_details .text-container.website_link a i {
+    margin-left: 4px;
+    position: relative;
+    top: -1px;
+}
+
+.internship_details .round_tabs_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.round_tabs {
+    background: #F8F8F8;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 14px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    line-height: 16px;
+}
+
+.internship_details .buttons_container a {
+    margin-bottom: 24px;
+}
+#content a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #008BDC;
+    cursor: pointer;
+    line-height: 1.14285714;
+}
+#content a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.internship_details .buttons_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content .internship_details .buttons_container a .btn {
+    margin-bottom: 0;
+}
+
+#content .internship_details .buttons_container .btn {
+    max-width: 271px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    padding: 12px 32px;
+    border: none;
+    min-width: 146px;
+}
+#content .btn.btn-large {
+    background: #00A5EC;
+    border-radius: 4px;
+    border: 1px solid #00A5EC;
+    color: #fff;
+    padding: 11px 31px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#content img {
+    /* vertical-align: middle; */
+    border-style: none;
+}
+#footer {
+	background-color: rgb(33, 34, 34);
+}
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+#footer h2 {
+	color: white;
+	font-weight: 400;
+	font-size: 1.6rem;
+	letter-spacing: .1rem;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#footer .social-icon {
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: .3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 1.3rem;
+}
